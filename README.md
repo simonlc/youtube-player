@@ -9,7 +9,6 @@
   * [Events](#events)
 * [Polyfills](#polyfills)
 * [Examples](#examples)
-* [Debugging](#debugging)
 * [Download](#download)
 * [Running the Examples](#running-the-examples)
 
@@ -116,19 +115,6 @@ You need to polyfill the environment locally (e.g. using a service such as https
 * [Playing a video](./examples/src/playing-video/index.html).
 * [Multiple players](./examples/src/multiple-players/index.html).
 * [Registering events handlers](./examples/src/registering-event-handlers/index.html).
-
-## Debugging
-
-`youtube-player` is using [`debug`](https://www.npmjs.com/package/debug) module to expose debugging information.
-
-The `debug` namespace is "youtube-player".
-
-To display `youtube-player` logs configure `localStorage.debug`, e.g.
-
-```js
-localStorage.debug = 'youtube-player:*';
-
-```
 
 ## Download
 

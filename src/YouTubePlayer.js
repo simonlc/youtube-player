@@ -1,6 +1,5 @@
 // @flow
 
-import createDebug from 'debug';
 import functionNames from './functionNames';
 import eventNames from './eventNames';
 import FunctionStateMap from './FunctionStateMap';
@@ -8,8 +7,6 @@ import type {
   EmitterType,
   YouTubePlayerType
 } from './types';
-
-const debug = createDebug('youtube-player');
 
 const YouTubePlayer = {};
 
@@ -31,8 +28,6 @@ YouTubePlayer.proxyEvents = (emitter: EmitterType): EventHandlerMapType => {
     const onEventName = 'on' + eventName.slice(0, 1).toUpperCase() + eventName.slice(1);
 
     events[onEventName] = (event) => {
-      debug('event "%s"', onEventName, event);
-
       emitter.trigger(eventName, event);
     };
   }
